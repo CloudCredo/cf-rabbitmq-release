@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -e
+
+[ -z "$DEBUG" ] || set -x
+
+bundle install --binstubs
+
+which lein >&- || brew install leiningen
+
+git submodule update --init
