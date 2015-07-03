@@ -42,19 +42,6 @@ jobs:
     - 10.244.9.50
 
 properties:
-  # for broker and route registrars
-  cf:
-    admin_password: "admin"
-    admin_username: "admin"
-    api_url: "http://api.10.244.0.34.xip.io"
-    domain: "10.244.0.34.xip.io"
-    nats:
-      host: "10.244.0.6"
-      port: "4222"
-      username: "nats"
-      password: "nats"
-  route-registrar:
-    target_ip: "10.244.9.50"
   rabbitmq-server:
     plugins:
     - rabbitmq_management
