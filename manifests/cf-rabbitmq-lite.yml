@@ -156,7 +156,7 @@ properties:
         policy_name: "operator_set_policy"
         policy_definition: "{\"ha-mode\":\"exactly\",\"ha-params\":2,\"ha-sync-mode\":\"automatic\"}"
         policy_priority: 50
-      management_domain: pivotal-rabbitmq.10.244.0.34.xip.io
+      management_domain: rabbitmq.10.244.0.34.xip.io
       ssl: |
         -----BEGIN CERTIFICATE-----
         MIIC+zCCAeOgAwIBAgIBAjANBgkqhkiG9w0BAQUFADAnMRUwEwYDVQQDEwxNeVRl
