@@ -41,40 +41,6 @@ jobs:
     static_ips:
     - 10.244.9.50
 
-- name: broker-registrar
-  release: cf-rabbitmq
-  template: broker-registrar
-  instances: 1
-  lifecycle: errand
-  networks:
-  - name: services1
-  properties:
-    broker:
-      protocol: http
-      host: 10.244.9.14
-      port: 4567
-      name: p-rabbitmq
-      username: "p1-rabbit"
-      password: "p1-rabbit-devpwd"
-  resource_pool: services-small
-
-- name: broker-deregistrar
-  release: cf-rabbitmq
-  template: broker-deregistrar
-  instances: 1
-  lifecycle: errand
-  networks:
-  - name: services1
-  properties:
-    broker:
-      protocol: http
-      host: 10.244.9.14
-      port: 4567
-      name: p-rabbitmq
-      username: "p1-rabbit"
-      password: "p1-rabbit-devpwd"
-  resource_pool: services-small
-
 properties:
   # for broker and route registrars
   cf:
