@@ -1,7 +1,11 @@
-set -e -x
+#!/bin/bash
+
+set -ex
 
 cd "${BUILD_DIR}/rabbitmq-broker"
-LEIN=./tools/leiningen/lein
 
-$LEIN uberjar
-cp target/broker-1.3.0-SNAPSHOT-standalone.jar ${BUILD_DIR}/rabbitmq-broker/pcf-rabbitmq-broker.jar
+export PATH="./tools/leiningen:$PATH"
+
+lein uberjar
+
+cp target/broker-1.3.0-SNAPSHOT-standalone.jar "${BUILD_DIR}/rabbitmq-broker/pcf-rabbitmq-broker.jar"
